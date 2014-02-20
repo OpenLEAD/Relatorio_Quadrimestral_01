@@ -1,0 +1,110 @@
+
+
+%%******************************************************************************
+%% CONFIGURATION
+%%******************************************************************************
+
+
+\documentclass[a4paper,11pt,oneside,openany,brazilian, version=last,draft=false,]{article}
+
+
+
+
+%%******************************************************************************
+%% DOCUMENT STYLE
+%%******************************************************************************
+
+
+\usepackage{graphicx}
+\usepackage{mybook}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{pdflscape}
+\usepackage{geometry}
+
+\pdfcompresslevel = 9
+\oddsidemargin = 31pt
+\topmargin = 20pt
+\headheight = 12pt
+\headsep = 25pt
+\textheight = 592pt
+\textwidth = 390pt
+\marginparsep = 10pt
+\marginparwidth = 35pt
+\footskip = 30pt
+
+%%******************************************************************************
+%% MAIN BODY
+%%******************************************************************************
+
+\begin{document}
+
+%%==============================================================================
+%% FRONT MATTER
+%%==============================================================================
+
+%\frontmatter
+
+\include{00_frontpage}
+\include{00_header}
+
+
+
+%%==============================================================================
+%% SUMMARY
+%%==============================================================================
+
+%\tableofcontents
+
+
+%%==============================================================================
+%% LIST OF TABLES, FIGURES, AND LISTINGS
+%%==============================================================================
+
+%\listoffigures
+%\listoftables
+%
+%\lstlistoflistings
+
+
+%%==============================================================================
+%% MAIN MATTER
+%%==============================================================================
+
+%\mainmatter
+
+\tableofcontents
+\listoffigures
+\include{01_Cronograma}
+\include{02_Financeiro}
+\include{03_Calculos_Modelagens}
+\include{04_Resultados_Alcancados}
+\include{05_Metodologia}
+\include{06_Reunioes}
+\include{07_Viagens}
+\include{08_Outros}
+\include{Anexo_I}
+
+
+
+
+
+
+
+%%==============================================================================
+%% APPENDIX - Team
+%%==============================================================================
+
+%\appendix
+
+
+
+
+%%==============================================================================
+%% BACK MATTER - Bibliography and Signature
+%%==============================================================================
+
+%\backmatter
+
+\end{document}

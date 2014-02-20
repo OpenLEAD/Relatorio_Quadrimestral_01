@@ -1,0 +1,102 @@
+
+%%******************************************************************************
+%% SECTION - Resultados alcançados (resumo de medidas efetuadas, resultados de análises e ensaios, especificações de protótipos, etc.);
+%%******************************************************************************
+\setcounter{secnumdepth}{3}
+\section{Resultados Alcançados}
+\label{resultados_alcancados}
+
+No primeiro quadrimestre do projeto foi realizado a definição do robô ROSA, seu modo de operação e seus componentes. O detalhamento do mesmo e a racionalização pelas escolhas de cada componente se encontra no documento de Projeto Básico em anexo. Aqui será apresentado apenas um resumo do resultado alcançado.
+
+O sistema ROSA é composto pelos sensores:
+\begin{itemize}
+\item Dois encoders absolutos.
+\item Dois sensores indutivos de proximidade.
+\item Sensor de inclinação.
+\item Sensor de profundidade.
+\item Unidade de Pan e Tilt
+\item Sonar profiling
+\end{itemize}
+
+Os encoders serão acoplados ao eixo de rotação da garra pescadora. O
+monitoramento do deslocamento angular das garras independentemente torna
+possível a identificação de falhas de encaixe. Durante a operação de encaixe, o
+eixo da garra percorre ângulos já conhecidos: o ângulo sofre leve abertura e
+volta a $90^o$ no encaixe. 
+
+Os sensores indutivos de proximidade serão instalados na garra pescadora,
+próximo ao local de contato com o stoplog. Indicarão o acoplamento das garras
+com o stoplog, a partir da geração de campo magnético. Esses sensores só serão
+excitados em casos de proximidade com metais, sendo possível assim a
+identificação de obstáculos no encaixe do stoplog. 
+
+O sensor de inclinação ficará localizado junto à eletrônica embarcada, na parte
+central do Lifting Beam. O monitoramento da inclinação do Lifting Beam é
+importante na identificação de encaixe mal sucedido ou danos no equipamento. O
+sensor será do tipo capacitivo.
+
+O sensor de profundidade também ficará localizado junto à eletrônica embarcada,
+na parte central do Lifting Beam. O sensor trabalha com diferença de pressão e
+será importante na identificação da localização do Lifting Beam quando submerso.
+
+O Sonar será acoplado a unidade Pan e Tilt, sendo o conjunto acoplado a base do lifting beam. Este conjunto será utilizado para realizar a inspeção através de mapeamento 3D do trilho do stoplog e dos olhais do stoplog. 
+
+Este sensores serão conectados a uma eletrônica embarcada submarina que irá processar os dados e transmiti-los para a superfície através de um umbilical. 
+
+A eletrônica embarcada é composta por: 
+
+\begin{itemize}
+	\item PC embarcado industrial com ethernet, RS485 e interface CAN
+	\item  conversores DC/DC
+	\item  placa microcontroladora com sensor de inclinação, sensor de profundidade, sensor de ingresso 	 	e portas para 2 sensores analógicos. 
+	\item circuito supervisório
+\end{itemize}
+
+A eletrônica embarcada terá encapsulamento à  água,
+choque e resistente mínima de 5 bar de pressão. O encapsulamento deve possuir 8 connectores subconn a prova d'agua para conectar os sensores externos: 
+
+\begin{itemize}
+ 	\item um Super Seaking Profiler DFP from Tritech
+ 	\item um Gemini 720i from Tritech
+	\item um Micron Sonar DST 750m from Tritech
+	\item um OE10-10 from Kongsberg
+	\item dois NBB20-L2-E2-V1 from Pepperl-Fuchs
+	\item dois RM9000 from IFM 
+\end{itemize}
+
+O circuito supervisório será responsável por distribuir a alimentação aos
+dispositivos, monitorar essa potência fornecida e proteger os equipamentos
+contra sobrecorrente/voltagem. Será composta por relés, microcontroladores e
+outros componentes eletrônicos.
+
+Conversores DC/DC realizam o condicionamento do sinal. Os dispositivos têm
+alimentação variada e o umbilical fornece apenas um nível de tensão, dessa forma
+há a necessidade de conversores para distribuírem a potência como requerida
+entre os dispositivos.
+
+A eletrônica embarcada será conectada a uma eletrônica de terra por um umbilical e operará submersa. 
+
+O Umbilical é um cabo especial  de alta resistência mecânica para operação submersa customizado para transmissão de energia e transmissão de dados. O umbilical fornece conexão de dados entre o sistema eletrônico embarcado e a eletrônica de terra. Além disso, o sistema eletrônico embarcado é alimentado pelo umbilical. A taxa de transmissão mínima necessária para o Umbilical é de 1xRS485 
+
+A eletrônica de superfície na base será composta por
+
+\begin{itemize}
+	\item PC Industrial com interface Wi-Fi
+	\item 230V de entrada de alimentação 
+	\item interfaces USB e LAN para periféricos 
+	\item Caixa Pelicase para a eletrônica
+\end{itemize}
+
+A fonte irá transmitir a potência necessária a todo o sistema embarcado
+através do umbilical.
+
+O PC processará todos os dados recebidos do sistema embarco e publicará na
+internet ou disponibilizará através do WiFi.
+
+O operador poderá monitorar todos os sensores através de um tablet com sistema
+de rede WiFi. 
+
+Para realizar a gerência do umbilical de maneira autônoma será pesquisado a possibilidade de se instalar um carretel industrial no guindaste. A definição do carretel ainda não foi concluída. 
+ 
+
+
